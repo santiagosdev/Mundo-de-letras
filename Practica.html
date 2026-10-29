@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica - Mundo De Letras</title>
+    <!-- Los estilos (colores, tamaños) están en el archivo estilos.css -->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <!-- ==============================
+         ENCABEZADO: título de la página
+    ============================== -->
+    <header>
+        <h1>Mundo De Letras</h1>
+        <p>¡Hora de practicar!</p>
+    </header>
+
+    <!-- ==============================
+         MENÚ: enlaces a las 4 páginas
+    ============================== -->
+    <nav>
+        <a href="index.html"><span>🏠</span> Inicio</a>
+        <a href="Aprende.html"><span>🧠</span> Aprende</a>
+        <a href="Practica.html" class="activo"><span>🎮</span> Practica</a>
+        <a href="Evaluate.html"><span>🏆</span> Evaluate</a>
+    </nav>
+
+    <!-- ==============================
+         CONTENIDO PRINCIPAL
+    ============================== -->
+    <main>
+        <section class="inicio">
+
+<!-- PESTAÑAS: botones para cambiar de actividad -->
+            <div class="pestanas">
+                <button class="activa" data-ir="a-vf">✅ Verdadero o Falso</button>
+                <button data-ir="a-completar">✍️ Completar Oraciones</button>
+                <button data-ir="a-sopa">🔍 Sopa de Letras</button>
+                <button data-ir="a-cruci">📝 Crucigrama</button>
+            </div>
+
+            <!-- ACTIVIDAD 1: Verdadero o Falso (las afirmaciones están en practica.js) -->
+            <div id="a-vf" class="actividad visible">
+                <h2>Verdadero o Falso</h2>
+                <p class="instruccion">📌 <strong>Instrucciones:</strong> Lee cada afirmación y decide, según el texto, si es <strong>Verdadera</strong> o <strong>Falsa</strong>. Elige un botón en cada una y, al terminar, pulsa «Verificar respuestas».</p>
+                <!-- TEXTO de esta actividad (puedes cambiarlo) -->
+                <div class="lectura">
+                    <h3>📖 El Amazonas: El Pulmón del Mundo</h3>
+                    <p>La selva amazónica es el bosque tropical más grande del planeta. Está ubicada principalmente en Brasil, aunque también se extiende por otros países como Colombia, Perú y Venezuela.</p>
+                    <p>En esta selva viven más de tres millones de especies de animales y plantas, muchas de ellas aún desconocidas para los científicos.</p>
+                    <p>El río Amazonas, que recorre esta selva, es el más caudaloso del mundo. Sus árboles absorben dióxido de carbono y liberan oxígeno, y ayudan a regular el clima del planeta, por eso se le llama "el pulmón del mundo".</p>
+                    <p>Sin embargo, la tala de árboles y la contaminación amenazan este importante ecosistema.</p>
+                </div>
+                <div id="vf-lista"></div>
+                <button class="btn" id="vf-btn">Verificar respuestas</button>
+                <p class="puntaje" id="vf-puntaje"></p>
+            </div>
+
+            <!-- ACTIVIDAD 2: Completar oraciones (elige la palabra en cada lista) -->
+            <div id="a-completar" class="actividad">
+                <h2>Completar Oraciones</h2>
+                <p class="instruccion">📌 <strong>Instrucciones:</strong> Lee cada oración y elige en la lista la palabra que falta, según el texto. Al terminar, pulsa «Verificar respuestas».</p>
+                <!-- TEXTO de esta actividad (puedes cambiarlo) -->
+                <div class="lectura">
+                    <h3>☕ El café de Colombia</h3>
+                    <p>Colombia es famosa en el mundo por su café. Este producto se cultiva en las montañas del Eje Cafetero, una región de paisajes verdes.</p>
+                    <p>Los cafetos son arbustos que dan unos frutos pequeños llamados cerezas. Cuando están maduras, las cerezas se ponen de color rojo y los campesinos las recogen a mano.</p>
+                    <p>Después, los granos se secan, se tuestan y se muelen para preparar la bebida. El café colombiano se vende en muchos países.</p>
+                </div>
+                <div id="completar-lista"></div>
+                <button class="btn" id="completar-btn">Verificar respuestas</button>
+                <p class="puntaje" id="completar-puntaje"></p>
+            </div>
+
+            <!-- ACTIVIDAD 3: Sopa de letras (clic en la primera y en la última letra) -->
+            <div id="a-sopa" class="actividad">
+                <h2>Sopa de Letras</h2>
+                <p class="instruccion">📌 <strong>Instrucciones:</strong> Busca en la cuadrícula las palabras de la lista. Haz clic en la <strong>primera letra</strong> de la palabra y luego en la <strong>última letra</strong>. Pueden estar en horizontal, vertical, diagonal o al revés.</p>
+                <!-- TEXTO de esta actividad (puedes cambiarlo) -->
+                <div class="lectura">
+                    <h3>🪐 El sistema solar</h3>
+                    <p>El Sol es una estrella y está en el centro del sistema solar. Alrededor del Sol giran ocho planetas.</p>
+                    <p>La Tierra es el tercer planeta y es el único donde conocemos la vida. La Luna gira alrededor de la Tierra: es su satélite.</p>
+                    <p>Marte es llamado el planeta rojo, Júpiter es el planeta más grande y Saturno es famoso por sus anillos.</p>
+                </div>
+                <p id="sopa-msg">¡Empieza a buscar!</p>
+                <div id="sopa"></div>
+                <div id="palabras"></div>
+            </div>
+
+            <!-- ACTIVIDAD 4: Crucigrama (las palabras y pistas están en practica.js) -->
+            <div id="a-cruci" class="actividad">
+                <h2>Crucigrama</h2>
+                <p class="instruccion">📌 <strong>Instrucciones:</strong> Usa las pistas para escribir <strong>una letra en cada cuadro blanco</strong>. El número indica dónde empieza cada palabra: → horizontal, ↓ vertical. Al terminar, pulsa «Verificar crucigrama».</p>
+                <!-- TEXTO de esta actividad (puedes cambiarlo) -->
+                <div class="lectura">
+                    <h3>💧 El ciclo del agua</h3>
+                    <p>El agua de los mares, los ríos y los lagos se calienta con el calor del Sol y se convierte en vapor. Este proceso se llama evaporación.</p>
+                    <p>El vapor sube al cielo, se enfría y forma las nubes. Cuando las nubes se llenan de gotas de agua, caen en forma de lluvia.</p>
+                    <p>Parte de la lluvia vuelve a los ríos y al mar, y el ciclo comienza de nuevo.</p>
+                </div>
+                <div style="overflow-x:auto"><table id="cruci"></table></div>
+                <div id="pistas"></div>
+                <button class="btn" id="cruci-btn">Verificar crucigrama</button>
+                <p class="puntaje" id="cruci-puntaje"></p>
+            </div>
+
+        </section>
+
+        <section class="inicio" style="text-align:center">
+            <a class="boton" href="Evaluate.html">¡Listo! Ir a la Evaluación</a>
+        </section>
+    </main>
+
+    <!-- ==============================
+         PIE DE PÁGINA
+    ============================== -->
+    <footer>
+        <p>© 2026 Mundo De Letras - Todos los derechos reservados</p>
+        <p>Técnico en Programación de Software · I.E. José María Silva Salazar</p>
+    </footer>
+
+    <script src="practica.js"></script>
+</body>
+</html>

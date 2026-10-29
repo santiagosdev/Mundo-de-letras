@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Mundo De Letras</title>
+    <!-- Los estilos (colores, tamaños) están en el archivo estilos.css -->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <!-- ==============================
+         ENCABEZADO: título de la página
+    ============================== -->
+    <header>
+        <h1>Mundo De Letras</h1>
+        <p>Aprende Jugando</p>
+    </header>
+
+    <!-- ==============================
+         MENÚ: enlaces a las 4 páginas
+    ============================== -->
+    <nav>
+        <a href="index.html" class="activo"><span>🏠</span> Inicio</a>
+        <a href="Aprende.html"><span>🧠</span> Aprende</a>
+        <a href="Practica.html"><span>🎮</span> Practica</a>
+        <a href="Evaluate.html"><span>🏆</span> Evaluate</a>
+    </nav>
+
+    <!-- ==============================
+         CONTENIDO PRINCIPAL
+    ============================== -->
+    <main>
+        <section class="inicio">
+
+            <h2>¡Bienvenido al mundo de letras!</h2>
+            <p>
+                Un viaje mágico donde aprenderás a encontrar
+                información importante en los textos.
+                ¡Prepárate para convertirte en un experto lector!
+            </p>
+
+            <!-- LOGO: pon tu imagen "Documento_Logo.png" en esta misma carpeta -->
+            <div class="carrusel">
+                <img src="Documento_Logo.png" alt="Logo" onerror="this.style.display='none'">
+            </div>
+
+            <h2>¿Qué vas a aprender?</h2>
+
+            <!-- TARJETAS: una por cada página de actividades -->
+            <div class="productos">
+                <div class="producto">
+                    <p class="icono">🧠</p>
+                    <h3>Aprende</h3>
+                    <p>Descubre qué es la información explícita</p>
+                    <a class="boton" href="Aprende.html">Ir a Aprende</a>
+                </div>
+                <div class="producto">
+                    <p class="icono">🎮</p>
+                    <h3>Practica</h3>
+                    <p>Ejercicios divertidos para practicar</p>
+                    <a class="boton" href="Practica.html">Ir a Practica</a>
+                </div>
+                <div class="producto">
+                    <p class="icono">🏆</p>
+                    <h3>Evaluate</h3>
+                    <p>Demuestra todo lo que aprendiste</p>
+                    <a class="boton" href="Evaluate.html">Ir a Evaluate</a>
+                </div>
+            </div>
+
+            <p style="text-align:center;margin-top:30px"><strong>Sigue el orden: Aprende → Practica → Evaluate</strong></p>
+
+        </section>
+    </main>
+
+    <!-- ==============================
+         PIE DE PÁGINA
+    ============================== -->
+    <footer>
+        <p>© 2026 Mundo De Letras - Todos los derechos reservados</p>
+        <p>Técnico en Programación de Software · I.E. José María Silva Salazar</p>
+    </footer>
+
+</body>
+</html>

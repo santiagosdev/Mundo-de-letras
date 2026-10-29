@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluate - Mundo De Letras</title>
+    <!-- Los estilos (colores, tamaños) están en el archivo estilos.css -->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <!-- ==============================
+         ENCABEZADO: título de la página
+    ============================== -->
+    <header>
+        <h1>Mundo De Letras</h1>
+        <p>Evaluación Final</p>
+    </header>
+
+    <!-- ==============================
+         MENÚ: enlaces a las 4 páginas
+    ============================== -->
+    <nav>
+        <a href="index.html"><span>🏠</span> Inicio</a>
+        <a href="Aprende.html"><span>🧠</span> Aprende</a>
+        <a href="Practica.html"><span>🎮</span> Practica</a>
+        <a href="Evaluate.html" class="activo"><span>🏆</span> Evaluate</a>
+    </nav>
+
+    <!-- ==============================
+         CONTENIDO PRINCIPAL
+    ============================== -->
+    <main>
+        <section class="inicio">
+
+            <!-- INSTRUCCIONES: cómo responder la evaluación -->
+            <p class="instruccion">📌 <strong>Instrucciones:</strong> Lee el texto con atención. Luego responde cada pregunta eligiendo <strong>una sola opción</strong> (A, B, C o D). Cuando hayas respondido todas, se activará el botón «Enviar evaluación» para ver tu resultado.</p>
+
+            <!-- LECTURA: texto sobre el que se responde (puedes cambiarlo) -->
+            <div class="lectura">
+                <h3>📖 El viaje de Camila</h3>
+                <p>Camila es una niña de 10 años que vive en la ciudad de Medellín, en el barrio El Poblado. Estudia en el Colegio San Rafael, en el grado 5°. El pasado 15 de julio, Camila viajó con su familia a Santa Marta para conocer el mar por primera vez. El viaje duró 15 horas en automóvil y partieron a las 6 de la mañana.</p>
+                <p>En el carro viajaban Camila, su hermano menor Andrés que tiene 6 años, su mamá llamada Lucía y su papá cuyo nombre es Roberto. Durante el camino, Camila leyó un libro de aventuras y Andrés escuchó música con sus audífonos rosados.</p>
+                <p>Cuando llegaron a la playa, Camila quedó maravillada. El mar era más azul de lo que había imaginado. Su hermano Andrés construyó un castillo de arena con la ayuda de su papá. Camila encontró 5 caracoles en la orilla.</p>
+                <p>La familia se hospedó en el Hotel del Mar durante 5 días. El hotel tenía una piscina olímpica y un restaurante en el tercer piso. Todas las mañanas desayunaban arepas con queso y jugo de naranja. La actividad favorita de Camila fue nadar con salvavidas de color amarillo. La temperatura del agua era de 28 grados.</p>
+                <p>El tercer día, visitaron el Parque Nacional Tayrona, donde vieron 3 monos y 12 loros de colores. El guía del parque se llamaba Marcos y tenía 35 años. Caminaron durante 2 horas por un sendero rodeado de árboles de mango.</p>
+                <p>El último día, compraron recuerdos en una tienda llamada "Regalos del Mar", cerca del hotel. Camila eligió una pulsera de conchas marinas que costó $15.000 pesos, y Andrés compró un barquito de madera que costó $8.000 pesos. Regresaron a Medellín muy felices con muchas historias para contar. El viaje de regreso duró 16 horas por el tráfico.</p>
+            </div>
+
+            <!-- PREGUNTAS: se generan desde evaluate.js -->
+            <div id="evaluacion">
+                <p class="puntaje" id="contador"></p>
+                <div id="preguntas"></div>
+                <button class="btn" id="enviar" disabled>Enviar evaluación</button>
+            </div>
+
+            <!-- RESULTADO: aparece al enviar -->
+            <div id="resultado" style="display:none"></div>
+
+        </section>
+    </main>
+
+    <!-- ==============================
+         PIE DE PÁGINA
+    ============================== -->
+    <footer>
+        <p>© 2026 Mundo De Letras - Todos los derechos reservados</p>
+        <p>Técnico en Programación de Software · I.E. José María Silva Salazar</p>
+    </footer>
+
+    <script src="evaluate.js"></script>
+</body>
+</html>

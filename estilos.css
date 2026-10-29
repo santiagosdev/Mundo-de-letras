@@ -1,0 +1,134 @@
+/* PALETA DEL OVA (combina con el fondo de cielo):
+   azul profundo #1e3a8a (títulos) · azul #2563eb · celeste #7cc4ff · celeste claro #e6f3ff · amarillo sol #ffd54f */
+
+/* ==============================
+   CONFIGURACIÓN GENERAL
+   (letra, fondo y colores base de todo el sitio)
+============================== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Trebuchet MS', 'Segoe UI', Arial, sans-serif; background-image: url(Fondo_pagina.jpeg);
+       background-size: cover; background-position: center; background-attachment: fixed; color: #1e293b; }
+
+/* ==============================
+   ENCABEZADO (título del sitio)
+============================== */
+header { text-align: center; padding: 30px; }
+header h1 { font-size: 70px; margin-bottom: 10px; color: #1e3a8a; text-shadow: 0 3px 0 #fff, 0 0 18px rgba(255,255,255,.9); }
+header p { display: inline-block; font-size: 18px; font-weight: bold; color: #1e3a8a; background: rgba(255,255,255,.85); padding: 4px 22px; border-radius: 30px; }
+
+/* ==============================
+   MENÚ (barra negra con los enlaces)
+============================== */
+nav { background: rgba(255,255,255,.88); backdrop-filter: blur(6px); padding: 12px; display: flex; justify-content: center; flex-wrap: wrap; gap: 10px;
+      position: sticky; top: 0; z-index: 10; border-bottom: 4px solid #7cc4ff; border-radius: 0 0 28px 28px; box-shadow: 0 6px 16px rgba(30,64,175,.25); }
+nav a { color: #1e3a8a; text-decoration: none; font-size: 18px; font-weight: bold; padding: 8px 22px; border-radius: 30px;
+        background: #e6f3ff; transition: transform .2s, background .2s; }
+nav a:hover { background: #bfe3ff; transform: translateY(-3px); }                    /* al pasar el mouse */
+nav a.activo { background: #ffd54f; color: #1e293b; box-shadow: 0 2px 6px rgba(0,0,0,.25); }   /* página actual: amarillo sol */
+
+/* ==============================
+   CONTENEDOR PRINCIPAL
+============================== */
+main { width: 90%; max-width: 1100px; margin: 30px auto; }
+
+/* ==============================
+   SECCIÓN BLANCA (caja de contenido de cada página)
+============================== */
+.inicio { background: rgba(255,255,255,.93); padding: 40px; border-radius: 28px; margin-bottom: 25px; border: 3px solid #fff; box-shadow: 0 8px 24px rgba(30,64,175,.18); }
+.inicio h2 { font-size: 35px; margin-bottom: 15px; text-align: center; color: #1e3a8a; }
+.inicio h3 { margin: 10px 0; color: #1e40af; }
+.inicio p, .inicio li { font-size: 20px; margin-bottom: 15px; }
+.inicio ul { margin-left: 25px; }
+
+/* ==============================
+   LOGO
+============================== */
+.carrusel { text-align: center; }
+.carrusel img { width: 200px; height: auto; display: block; margin: 0 auto; }
+
+/* ==============================
+   TARJETAS (Aprende / Practica / Evaluate en el inicio)
+============================== */
+.productos { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 30px; }
+.producto { background: #fff; width: 280px; padding: 20px; text-align: center; border-radius: 20px; border-top: 6px solid #7cc4ff; box-shadow: 0 6px 16px rgba(30,64,175,.2); transition: transform .2s; }
+.producto:hover { transform: translateY(-5px); }
+.producto .icono { font-size: 60px; }
+.boton, .btn { background: linear-gradient(90deg, #2563eb, #0ea5e9); color: #fff; border: none; padding: 12px 25px; border-radius: 30px; font-weight: bold;
+               cursor: pointer; text-decoration: none; display: inline-block; font-size: 16px; }
+.boton:hover, .btn:hover { background: #ffd54f; color: #1e293b; }
+.btn:disabled { opacity: .4; cursor: not-allowed; }
+
+/* ==============================
+   CAJAS DE TEXTO Y VIDEO (página Aprende)
+============================== */
+.caja { background: #e0f2fe; border-radius: 12px; padding: 15px 20px; margin-bottom: 15px; }
+.columnas { display: flex; gap: 20px; flex-wrap: wrap; }
+.columnas > div { flex: 1 1 280px; }
+.video { margin-top: 20px; text-align: center; }
+.video iframe { width: 100%; max-width: 700px; aspect-ratio: 16/9; border: 0; border-radius: 10px; }
+
+/* ==============================
+   LECTURA (texto que se lee antes de las preguntas)
+============================== */
+.lectura { background: #fff; border-left: 6px solid #2563eb; padding: 15px 20px; margin-bottom: 20px; border-radius: 10px; }
+.lectura h3 { margin-top: 0; }
+
+/* ==============================
+   INSTRUCCIONES (recuadro amarillo al inicio de cada actividad)
+============================== */
+.instruccion { background: #fff7d6; border-left: 6px solid #f59e0b; border-radius: 10px; padding: 12px 16px; margin-bottom: 18px; font-size: 18px !important; }
+
+/* ==============================
+   ACTIVIDADES (pestañas, preguntas y respuestas)
+============================== */
+.pestanas { text-align: center; margin-bottom: 20px; }
+.pestanas button { margin: 4px; padding: 10px 20px; border-radius: 30px; border: 2px solid #7cc4ff; background: #fff; color: #1e3a8a; font-weight: bold; cursor: pointer; }
+.pestanas button:hover { background: #e6f3ff; }
+.pestanas button.activa { background: #2563eb; color: #fff; border-color: #2563eb; }
+.actividad { display: none; }
+.actividad.visible { display: block; }
+.item { border: 2px solid #cfe5ff; border-radius: 12px; padding: 12px; margin-bottom: 12px; }
+.item p, .item span { font-size: 18px; }
+.op { padding: 9px 16px; margin: 4px 4px 0 0; border: 2px solid #bfdbfe; border-radius: 10px; background: #f4f9ff; cursor: pointer; font-size: 16px; }
+.op.elegida { border-color: #2563eb; background: #e0f2fe; }
+.item.ok, .item.ok .op.elegida { border-color: #16a34a; background: #f0fdf4; }   /* acierto: verde */
+.item.mal, .item.mal .op.elegida { border-color: #dc2626; background: #fef2f2; }  /* error: rojo */
+select { font-size: 16px; padding: 4px 8px; }
+.puntaje { font-weight: bold; font-size: 22px; margin: 15px 0; color: #1e3a8a; }
+
+/* ==============================
+   SOPA DE LETRAS
+============================== */
+#sopa { display: grid; grid-template-columns: repeat(10, 1fr); gap: 4px; max-width: 420px; margin: 15px 0; }
+#sopa button { aspect-ratio: 1; border: 2px solid #cfe5ff; border-radius: 8px; background: #eef6ff; font-weight: bold; font-size: 16px; cursor: pointer; padding: 0; }
+#sopa button.inicio-sel { background: #4f46e5; color: #fff; }
+#palabras span { display: inline-block; margin: 3px; padding: 4px 12px; border-radius: 20px; background: #dbeafe; color: #1e3a8a; font-size: 16px; }
+#palabras span.hallada { color: #fff; text-decoration: line-through; }
+
+/* ==============================
+   CRUCIGRAMA
+============================== */
+#cruci { border-spacing: 2px; margin: 15px 0; }
+#cruci td { width: 38px; height: 38px; padding: 0; position: relative; }
+#cruci td.negra { background: #1e3a8a; }
+#cruci input { width: 100%; height: 100%; text-align: center; font-weight: bold; font-size: 16px; text-transform: uppercase; border: 2px solid #7cc4ff; padding: 0; }
+#cruci small { position: absolute; top: 0; left: 2px; font-size: 10px; color: #4f46e5; pointer-events: none; }
+#cruci input.ok { background: #dcfce7; border-color: #16a34a; }
+#cruci input.mal { background: #fee2e2; border-color: #dc2626; }
+
+/* ==============================
+   PIE DE PÁGINA
+============================== */
+footer { background: linear-gradient(90deg, #1e3a8a, #2563eb, #0ea5e9); color: #fff; text-align: center; padding: 25px; margin-top: 40px; border-radius: 28px 28px 0 0; border-top: 4px solid #7cc4ff; }
+footer p + p { margin-top: 6px; font-size: 15px; opacity: .85; }   /* 2.ª línea: programa y colegio */
+
+/* ==============================
+   DISEÑO PARA CELULARES
+============================== */
+@media (max-width: 600px) {
+  header h1 { font-size: 36px; }
+  nav { gap: 6px; padding: 8px; }
+  nav a { flex: 1 1 40%; text-align: center; font-size: 16px; padding: 8px 6px; }
+  .inicio { padding: 20px; }
+  #cruci td { width: 32px; height: 32px; }
+}
